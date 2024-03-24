@@ -6,7 +6,7 @@ Console.WriteLine("Modyfikacja 1");
 Console.WriteLine("Modyfikacja 2");
 Console.WriteLine("Modyfikacja 2");
 
-double CalculateAverage(int[] numbers)
+static double CalculateAverage(int[] numbers)
 {
     if (numbers == null || numbers.Length == 0)
     {
@@ -21,4 +21,24 @@ double CalculateAverage(int[] numbers)
 
     return (double)sum / numbers.Length;
 }
+
+static int FindMaximum(int[] numbers)
+{
+    if (numbers == null || numbers.Length == 0)
+    {
+        throw new ArgumentException("Tablica nie może być pusta.");
+    }
+
+    int max = numbers[0];
+    foreach (int number in numbers)
+    {
+        if (number > max)
+        {
+            max = number;
+        }
+    }
+
+    return max;
+}
+
 
