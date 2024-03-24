@@ -6,20 +6,20 @@ Console.WriteLine("Modyfikacja 1");
 Console.WriteLine("Modyfikacja 2");
 Console.WriteLine("Modyfikacja 2");
 
-static double CalculateAverage(int[] numbers)
+static double CalculateAverage(int[] change)
 {
-    if (numbers == null || numbers.Length == 0)
+    if (change == null || change.Length == 0)
     {
         throw new ArgumentException("Tablica nie może być pusta.");
     }
 
-    long sum = 0;
-    foreach (int number in numbers)
+    long sumaMain = 0;
+    foreach (int number in change)
     {
-        sum += number;
+        sumaMain += number;
     }
 
-    return (double)sum / numbers.Length;
+    return (double)sumaMain / change.Length;
 }
 
 static int FindMaximum(int[] numbers)
