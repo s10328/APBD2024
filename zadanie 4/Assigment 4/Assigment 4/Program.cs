@@ -2,13 +2,13 @@ using Assigment_4.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Dodaj serwis dla systemu routingu
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Włącz Swagger, jeśli chcesz mieć interfejs użytkownika do testowania API
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
